@@ -1,0 +1,223 @@
+---
+title: "Regional Climate Cooperation: A RICE Model Analysis"
+author: "Sai Prakash"
+format:
+  revealjs:
+    theme: default
+    slide-number: true
+    progress: true
+    toc: false
+    transition: fade
+    chalkboard: false
+    center: true
+    incremental: false
+---
+
+## The Urgency of Climate Action
+
+- UNEP 2024: Projected warming of **2.6–3.1°C** by 2100 even with full NDC compliance.
+- 42% emissions cut by 2030, 57% by 2035 needed for 1.5°C goal.
+- Classic **collective action problem**: Everyone benefits, but no one wants to pay.
+
+::: notes
+Use this to establish urgency. Mention how even ambitious pledges fall short. Introduce the problem of free-riding clearly.
+:::
+
+---
+
+## Research Objective
+
+> **What are the economic and environmental outcomes of cooperative vs non-cooperative climate action among major emitters?**
+
+- The United States, European Union, China, and India
+
+::: notes
+Clarify the basic question and simulation setup. Mention that Nash equilibrium means strategic independence.
+:::
+
+---
+
+## From DICE to RICE
+
+| DICE (Global)           | RICE (Regional)          |
+|------------------------|--------------------------|
+| Single global region   | Multiple heterogeneous regions |
+| Aggregate emissions    | Regional emissions       |
+| Global damage function | Regional damage profiles |
+
+
+- Developed by **William Nordhaus**.
+- RICE better reflects real-world policy complexity.
+
+::: notes
+Use this to bridge to model selection. Show why RICE is more realistic and policy-relevant.
+:::
+
+---
+
+## Model Structure
+
+1. **Economic Module**: GDP via Cobb-Douglas
+2. **Emissions Module**: GDP × carbon intensity
+3. **Climate Module**: Radiative forcing → warming
+4. **Damage Function**: Temp-driven output loss
+5. **Abatement Cost Function**: Convex mitigation cost
+6. **Welfare Function**: Discounted per capita utility
+
+::: notes
+Walk through each module briefly. Emphasize how the structure enables equity-aware comparisons.
+:::
+
+---
+
+## Implementation Tools
+
+- Simulations run using [white-heomoi/RICE13_pyomo](https://github.com/white-heomoi/RICE13_pyomo), a Python-based adaptation of Nordhaus’ RICE model.
+- Simulated Time Horizon: 2005–2125 (in 10-year steps)
+- All runs used the model’s default configuration without modification.
+
+::: notes
+Mention credibility and reproducibility from using open-source code.
+:::
+
+---
+
+## Scenario Design
+
+Two scenarios:
+
+- **Non-Cooperative (Nash Equilibrium)** — regions act independently.
+- **Cooperative (Global Optimum)** — regions coordinate for shared welfare.
+
+> **Focus**: Comparing *carbon pricing*, *emissions*, and *temperature* across both scenarios.
+
+::: notes
+Explain that these are stylized scenarios—good for comparative insights.
+:::
+
+---
+
+## Results: Carbon Pricing
+
+::: columns
+::: {.column width="65%"}
+<img src="assets/carbon_price_chart.png" style="max-height:65vh; object-fit:contain;">
+:::
+
+::: {.column width="35%"}
+
+
+| Region | 2005 | 2070 |
+|--------|------|------|
+| US     | 0.084% | 0.378% |
+| EU     | 0.015% | 0.094% |
+| CHI    | 0.003% | 0.042% |
+| IND    | 0.00008% | 0.0044%  |
+
+:::
+:::
+
+
+::: notes
+Highlight the pricing divergence. Emphasize how cooperation drives meaningful carbon pricing while non-cooperation stagnates.
+:::
+
+---
+
+## Results: Emissions Trajectories
+
+::: panel-tabset
+### Regional Emissions
+
+<div style="text-align: center;">
+  <img src="assets/emissions_trajectories.png" style="max-height:65vh; object-fit:contain;">
+</div>
+
+
+### Global Emissions
+
+<div style="text-align: center;">
+  <img src="assets/global_emissions.png" style="max-height:65vh; object-fit:contain;">
+</div>
+
+:::
+
+::: notes
+Use this to show the difference in emissions behavior. Regional strategies align more under cooperation.
+:::
+
+---
+
+## Results: Temperature Projections
+
+::: columns
+::: {.column width="70%"}
+<img src="assets/temperature_projection.png" style="max-height:65vh; object-fit:contain;">
+:::
+
+::: {.column width="30%"}
+
+- Cooperative: ~3.78°C by 2125
+- Non-cooperative: ~4.18°C by 2125
+:::
+:::
+
+::: notes
+Explain why even small temperature shifts are significant: melting ice, sea levels, biodiversity, etc.
+:::
+
+---
+
+## Policy Implications
+
+- Cooperation raises global welfare but benefits are unevenly shared
+- High-cost or vulnerable regions may need support to join and stay in agreements
+- Fairness is essential for stable long-term cooperation
+- Policy tools to support equity; *Financial transfers*, *Technology sharing*, and *Capacity-building for adaptation*
+
+
+::: notes
+Policy connection slide—tie your findings to active climate frameworks.
+:::
+
+---
+
+## Limitations & Extensions
+
+- Simplified climate damages
+- Exogenous tech change
+- No behavioral/political feedbacks
+
+**Future work:**
+
+- Endogenous innovation
+- Tipping points, uncertainty
+- Multi-actor strategic modeling
+
+::: notes
+Good slide to show humility and realism about modeling boundaries.
+:::
+
+---
+
+## Final Thoughts
+
+**Thesis:** Cooperation improves outcomes.
+
+- Emissions ↓, Temperatures ↓, Welfare ↑
+- Requires fairness, flexibility, trust
+- Cooperation must become the **default**
+
+> "Climate change is a shared crisis. Solutions must be shared too."
+
+::: notes
+Reiterate your core takeaway with confidence and clarity.
+:::
+
+---
+
+## Thank You
+
+::: notes
+Close with gratitude and openness. Invite follow-up.
+:::
