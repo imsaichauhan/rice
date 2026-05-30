@@ -1,6 +1,6 @@
 # Regional Climate Cooperation: A RICE Model Analysis
 
-> **Author:** Sai Prakash, MA Applied Quantitative Finance (2023-25) | **Model:** RICE-2013 (Nordhaus) | **Status:** Complete | **Presentation:** [imsaichauhan.github.io/rice](https://imsaichauhan.github.io/rice)
+> **Model:** RICE-2013 (Nordhaus) | **Status:** Complete | **Presentation:** [imsaichauhan.github.io/rice](https://imsaichauhan.github.io/rice)
 
 Analyze the economic and environmental impacts of climate cooperation among the United States, the European Union, China, and India from 2005 to 2125 using the Regional Integrated Climate-Economy (RICE) model.
 
